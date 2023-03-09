@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curions</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <style>
+            body{
+                background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+            }
+            .center {
+                text-align: center;
+            }
+            .text{
+               font-size: 20px;
+               font-weight: 400;
+            }
+            .custom-form {
+            max-width: 400px;
+            margin: auto;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+  $('#custom-form').validate({
+    rules: {
+      name: 'required',
+      email: {
+        required: true,
+        email: true
+      },
+      phone: {
+        required: true,
+        digits: true
+      },
+      address: 'required',
+      course: 'required'
+    },
+    messages: {
+      name: 'Please enter your name',
+      email: {
+        required: 'Please enter your email address',
+        email: 'Please enter a valid email address'
+      },
+      phone: {
+        required: 'Please enter your phone number',
+        digits: 'Please enter only digits'
+      },
+      address: 'Please enter your address',
+      course: 'Please enter the course you want to take'
+    },
+    submitHandler: function(form) {
+      // Form submission code goes here
+    }
+  });
+});
+
+        </script>
+    </head>
+    <body>
+        <header class=" sticky-top ">
+            <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:black;">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html"><h2>Curions</h2></a>
+                    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav" >
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link text" style="color: white;" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text" style="color:white;" href="courses.html">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text" style="color:white;" href="shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text"  style="color: white;" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text" style="color: white;" href="#">Student showcase</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text" style="color: white;" href="get started.html">Get started</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container align-items-center" style="height: 600px;">
+            <div class="row">
+                <div class="col-12 col-md-12 align-items-center">
+                    <h1 style="font-size:45px;" class="mt-3 align-items-center text-white center mt-5" >Curions Log in/Register</h1>
+                </div>
+                <form action="/submit" class="col-12 col-md-12 mt-5 custom-form" id="custom-form" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" name=s"email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="course" name="course" placeholder="Course">
+                    </div>
+                    <div class="center">
+                        <button style="background-color: black; color: white; font-size: 25px;">
+                            Log in/Register
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br><br><br>
+        <footer class=" text-white py-3" style="background: black;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: curionsofficial@gmail.com</p>
+                <p>Phone: +1 (555) 555-5555</p>
+                <p>Address: 123 Main St, Anytown USA</p>
+              </div>
+              <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <p><a href="https://www.youtube.com/channel/UCFg0Cv7m2pCh1t3iAIPp6bA" style="color:white; text-decoration: none;">Youtube</a></p>
+                <p><a href="#"  style="color:white; text-decoration: none;">Facebook</a></p>
+                <p><a href="https://www.instagram.com/curielabs/"  style="color:white; text-decoration: none;">Instagram</a></p>
+              </div>
+              <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>Curions is the largest platform for Industry 4.0 skill development, offering courses and a shop for tools and materials.</p>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12 text-center">
+                <p>&copy; 2023 Curions. All rights reserved.<br>Made by sreekiran</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
